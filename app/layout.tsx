@@ -12,7 +12,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Sanasya | Premium Bakery Catalogue',
+  title: 'Sanasya Bakery | Premium Bakery Catalogue',
   description: 'Discover handcrafted biscuits, cakes, and desserts. Browse our artisanal collection and place your custom order.',
   icons: {
     icon: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.json',
   openGraph: {
-    title: 'Sanasya | Premium Bakery Catalogue',
+    title: 'Sanasya Bakery | Premium Bakery Catalogue',
     description: 'Handcrafted treats made with love and premium ingredients.',
     type: 'website',
   },
