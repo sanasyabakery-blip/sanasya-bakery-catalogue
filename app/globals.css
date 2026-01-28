@@ -66,7 +66,7 @@ section {
 /* Smooth transitions for interactive elements */
 button,
 a {
-  @apply transition-all duration-300;
+  @apply transition-all duration-500;
 }
 
 /* Focus states for accessibility */
@@ -93,10 +93,38 @@ h6 {
 /* Card shadows */
 .card,
 .shadow-card {
-  @apply shadow-md hover:shadow-lg transition-shadow;
+  @apply shadow-md hover:shadow-lg transition-shadow duration-500;
 }
 
 /* Gradient text utility */
 .gradient-text {
   @apply bg-gradient-to-r from-chocolate to-caramel bg-clip-text text-transparent;
+}
+
+/* Premium animation easing */
+@keyframes premium-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes premium-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Smooth, elegant transitions */
+.transition-premium {
+  transition: all 700ms cubic-bezier(0.23, 1, 0.320, 1);
 }

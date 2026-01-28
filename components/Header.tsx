@@ -19,6 +19,7 @@ const navItems: NavItem[] = [
   { label: 'Cupcakes', id: 'cupcakes-tea-cakes' },
   { label: 'Doughnuts', id: 'doughnuts' },
   { label: 'Chocolates', id: 'chocolates' },
+  { label: 'Panna Cotta', id: 'panna-cotta' },
 ]
 
 export default function Header() {
@@ -28,7 +29,7 @@ export default function Header() {
     const element = document.getElementById(id)
     if (element) {
       // Account for sticky header height (approximately 70px)
-      const offset = 70
+      const offset = 80
       const elementPosition = element.getBoundingClientRect().top + window.scrollY
       window.scrollTo({
         top: elementPosition - offset,
@@ -46,7 +47,7 @@ export default function Header() {
   const handleContactClick = () => {
     const element = document.getElementById('contact')
     if (element) {
-      const offset = 70
+      const offset = 80
       const elementPosition = element.getBoundingClientRect().top + window.scrollY
       window.scrollTo({
         top: elementPosition - offset,
@@ -58,7 +59,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-blush shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           {/* Logo - Animated */}
           <motion.button
@@ -68,7 +69,7 @@ export default function Header() {
             transition={{ duration: 0.5 }}
             className="flex-shrink-0 focus:outline-none"
           >
-            <h1 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-chocolate hover:text-caramel transition-colors">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-chocolate hover:text-caramel transition-colors duration-300">
               Sanasya Bakery
             </h1>
           </motion.button>
@@ -79,7 +80,7 @@ export default function Header() {
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className="text-xs xl:text-sm font-medium text-chocolate hover:text-caramel transition-colors whitespace-nowrap"
+                className="text-xs xl:text-sm font-medium text-chocolate hover:text-caramel transition-colors duration-300 whitespace-nowrap"
               >
                 {item.label}
               </button>
@@ -92,7 +93,7 @@ export default function Header() {
               onClick={handleContactClick}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="hidden sm:inline-flex px-3 sm:px-4 py-2 bg-caramel text-white rounded-lg font-medium text-xs sm:text-sm hover:bg-opacity-90 transition-all"
+              className="hidden sm:inline-flex px-3 sm:px-4 py-2 bg-caramel text-white rounded-lg font-medium text-xs sm:text-sm hover:bg-opacity-90 transition-all duration-300"
             >
               Enquire
             </motion.button>
@@ -100,7 +101,7 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 hover:bg-cream rounded-lg transition-colors"
+              className="lg:hidden p-2 hover:bg-cream rounded-lg transition-colors duration-300"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -119,20 +120,22 @@ export default function Header() {
               className="lg:hidden mt-3 space-y-2 border-t border-blush pt-3 max-h-[60vh] overflow-y-auto"
             >
               {navItems.map((item) => (
-                <button
+                <motion.button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className="block w-full text-left px-4 py-2 text-sm text-chocolate hover:bg-cream rounded-lg transition-colors"
+                  whileHover={{ x: 4 }}
+                  className="block w-full text-left px-4 py-2.5 text-sm font-medium text-chocolate hover:bg-cream rounded-lg transition-colors duration-300"
                 >
                   {item.label}
-                </button>
+                </motion.button>
               ))}
-              <button
+              <motion.button
                 onClick={handleContactClick}
-                className="block w-full text-left px-4 py-2 bg-caramel text-white rounded-lg font-medium text-sm hover:bg-opacity-90 transition-all"
+                whileHover={{ scale: 1.02 }}
+                className="block w-full text-left px-4 py-2.5 bg-caramel text-white rounded-lg font-medium text-sm hover:bg-opacity-90 transition-all duration-300 mt-2"
               >
                 Enquire Now
-              </button>
+              </motion.button>
             </motion.div>
           )}
         </AnimatePresence>

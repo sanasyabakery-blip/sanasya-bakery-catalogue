@@ -7,6 +7,7 @@ export type Category =
   | 'Cupcakes & Tea Cakes'
   | 'Doughnuts'
   | 'Chocolates'
+  | 'Panna Cotta'
 
 export type EggType = 'Egg' | 'Eggless' | 'Available Both'
 export type Tag = 'bestseller' | 'classic' | 'premium'
@@ -157,7 +158,7 @@ export const menuItems: MenuItem[] = [
     description: 'Decadent layers of chocolate sponge, cherries, and whipped cream. A timeless classic.',
     category: 'Cakes',
     eggType: 'Available Both',
-    tags: ['premium'],
+    tags: ['premium', 'classic'],
   },
   {
     id: 'cakes-2',
@@ -172,7 +173,7 @@ export const menuItems: MenuItem[] = [
     description: 'Rich, fudgy, utterly luxurious. For chocolate obsessives only.',
     category: 'Cakes',
     eggType: 'Available Both',
-    tags: ['premium'],
+    tags: ['premium', 'bestseller'],
   },
   {
     id: 'cakes-4',
@@ -180,6 +181,7 @@ export const menuItems: MenuItem[] = [
     description: 'Velvety soft with cream cheese frosting. Stunning to look at, divine to taste.',
     category: 'Cakes',
     eggType: 'Available Both',
+    tags: ['classic'],
   },
   {
     id: 'cakes-5',
@@ -194,6 +196,7 @@ export const menuItems: MenuItem[] = [
     description: 'Golden, buttery, and utterly indulgent. Caramel lovers rejoice.',
     category: 'Cakes',
     eggType: 'Available Both',
+    tags: ['bestseller'],
   },
   {
     id: 'cakes-7',
@@ -201,7 +204,7 @@ export const menuItems: MenuItem[] = [
     description: 'Creamy, tangy, and perfectly balanced. A dessert masterpiece.',
     category: 'Cakes',
     eggType: 'Available Both',
-    tags: ['premium'],
+    tags: ['premium', 'classic'],
   },
   {
     id: 'cakes-8',
@@ -223,6 +226,7 @@ export const menuItems: MenuItem[] = [
     description: 'Tropical sunshine in cake form. Fresh, fruity, and refreshingly different.',
     category: 'Cakes',
     eggType: 'Available Both',
+    tags: ['bestseller'],
   },
   {
     id: 'cakes-11',
@@ -246,7 +250,7 @@ export const menuItems: MenuItem[] = [
     description: 'Three milks soaked into tender sponge—creamy, delicate, unforgettable.',
     category: 'Desserts',
     eggType: 'Available Both',
-    tags: ['classic'],
+    tags: ['classic', 'bestseller'],
   },
   {
     id: 'desserts-2',
@@ -282,7 +286,7 @@ export const menuItems: MenuItem[] = [
     description: 'Nutty, creamy hazelnut paired with the tres leches treatment. Heavenly.',
     category: 'Desserts',
     eggType: 'Available Both',
-    tags: ['premium'],
+    tags: ['premium', 'bestseller'],
   },
   {
     id: 'desserts-7',
@@ -311,7 +315,7 @@ export const menuItems: MenuItem[] = [
     description: 'Espresso and mascarpone layers—the original, beloved, never outdone.',
     category: 'Desserts',
     eggType: 'Available Both',
-    tags: ['classic', 'premium'],
+    tags: ['classic', 'premium', 'bestseller'],
   },
   {
     id: 'desserts-11',
@@ -361,7 +365,7 @@ export const menuItems: MenuItem[] = [
     description: 'Nutty, aromatic pistachio elevates this Italian classic.',
     category: 'Desserts',
     eggType: 'Available Both',
-    tags: ['premium'],
+    tags: ['premium', 'classic'],
   },
 
   // ==================== BROWNIES ====================
@@ -378,7 +382,7 @@ export const menuItems: MenuItem[] = [
     description: 'Moist, dense, and gloriously fudgy. Pure chocolate heaven.',
     category: 'Brownies',
     eggType: 'Available Both',
-    tags: ['bestseller'],
+    tags: ['bestseller', 'classic'],
   },
   {
     id: 'brownies-3',
@@ -393,7 +397,7 @@ export const menuItems: MenuItem[] = [
     description: 'Rich, luxurious, and unapologetically indulgent. For the chocolate devoted.',
     category: 'Brownies',
     eggType: 'Available Both',
-    tags: ['premium'],
+    tags: ['premium', 'bestseller'],
   },
   {
     id: 'brownies-5',
@@ -475,7 +479,7 @@ export const menuItems: MenuItem[] = [
     description: 'Classic vanilla perfection in a portable, pretty package.',
     category: 'Cupcakes & Tea Cakes',
     eggType: 'Available Both',
-    tags: ['classic'],
+    tags: ['classic', 'bestseller'],
   },
   {
     id: 'cupcakes-4',
@@ -525,7 +529,7 @@ export const menuItems: MenuItem[] = [
     description: 'Dense with dried fruit and warm spices. A festive, celebration classic.',
     category: 'Cupcakes & Tea Cakes',
     eggType: 'Available Both',
-    tags: ['premium'],
+    tags: ['premium', 'classic'],
   },
 
   // ==================== DOUGHNUTS ====================
@@ -621,5 +625,47 @@ export const menuItems: MenuItem[] = [
     description: 'Pure, quality chocolate in your favorite form. No frills, all flavor.',
     category: 'Chocolates',
     eggType: 'Eggless',
+  },
+
+  // ==================== PANNA COTTA ====================
+  {
+    id: 'panna-cotta-1',
+    title: 'Classic Vanilla with Berry Sauce',
+    description: 'Silky, delicate vanilla panna cotta topped with a vibrant berry compote. Pure elegance.',
+    category: 'Panna Cotta',
+    eggType: 'Available Both',
+    tags: ['classic', 'bestseller'],
+  },
+  {
+    id: 'panna-cotta-2',
+    title: 'Mango Panna Cotta',
+    description: 'Tropical mango essence creates a lush, creamy panna cotta. Summer in a spoon.',
+    category: 'Panna Cotta',
+    eggType: 'Available Both',
+    tags: ['bestseller'],
+  },
+  {
+    id: 'panna-cotta-3',
+    title: 'Strawberry Panna Cotta',
+    description: 'Fresh strawberry puree swirled into smooth, creamy panna cotta. Fruity and fine.',
+    category: 'Panna Cotta',
+    eggType: 'Available Both',
+    tags: ['classic'],
+  },
+  {
+    id: 'panna-cotta-4',
+    title: 'Tender Coconut (Elaneer) Panna Cotta',
+    description: 'Kerala\'s tropical treasure—tender coconut water and cream create pure heaven.',
+    category: 'Panna Cotta',
+    eggType: 'Available Both',
+    tags: ['premium'],
+  },
+  {
+    id: 'panna-cotta-5',
+    title: 'Chocolate Panna Cotta',
+    description: 'Rich, velvety chocolate panna cotta for the devoted chocolate lover.',
+    category: 'Panna Cotta',
+    eggType: 'Available Both',
+    tags: ['premium', 'bestseller'],
   },
 ]

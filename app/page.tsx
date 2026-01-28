@@ -18,6 +18,7 @@ export default function Home() {
   const cupcakes = menuItems.filter((item) => item.category === 'Cupcakes & Tea Cakes')
   const doughnuts = menuItems.filter((item) => item.category === 'Doughnuts')
   const chocolates = menuItems.filter((item) => item.category === 'Chocolates')
+  const pannaCotta = menuItems.filter((item) => item.category === 'Panna Cotta')
 
   return (
     <>
@@ -128,6 +129,20 @@ export default function Home() {
           <section id="chocolates" className="bg-blush scroll-mt-20">
             <CategorySection title="Chocolates" sectionId="chocolates">
               {chocolates.map((item) => (
+                <MenuCard
+                  key={item.id}
+                  {...item}
+                />
+              ))}
+            </CategorySection>
+          </section>
+        )}
+
+        {/* Panna Cotta Section */}
+        {pannaCotta.length > 0 && (
+          <section id="panna-cotta" className="bg-white scroll-mt-20">
+            <CategorySection title="Panna Cotta" sectionId="panna-cotta">
+              {pannaCotta.map((item) => (
                 <MenuCard
                   key={item.id}
                   {...item}

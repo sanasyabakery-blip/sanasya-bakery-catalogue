@@ -20,6 +20,7 @@ const categoryIdMap: Record<Category, string> = {
   'Cupcakes & Tea Cakes': 'cupcakes-tea-cakes',
   Doughnuts: 'doughnuts',
   Chocolates: 'chocolates',
+  'Panna Cotta': 'panna-cotta',
 }
 
 export default function CategorySection({ title, sectionId, children }: CategorySectionProps) {
@@ -29,28 +30,34 @@ export default function CategorySection({ title, sectionId, children }: Category
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6 }}
-      className="py-12 px-4 sm:px-6 lg:px-8 scroll-mt-20"
+      transition={{ duration: 0.8, ease: [0.23, 1, 0.320, 1] }}
+      className="py-16 px-4 sm:px-6 lg:px-8 scroll-mt-20"
     >
       <motion.h2
-        initial={{ opacity: 0, y: -10 }}
+        initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.5 }}
-        className="text-3xl md:text-4xl font-serif font-bold text-chocolate mb-2 text-center"
+        transition={{ duration: 0.6, ease: [0.23, 1, 0.320, 1] }}
+        className="text-4xl md:text-5xl font-serif font-bold text-chocolate mb-3 text-center"
       >
         {title}
       </motion.h2>
       <motion.div
+        initial={{ opacity: 0, scaleX: 0 }}
+        whileInView={{ opacity: 1, scaleX: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.7, delay: 0.2, ease: [0.23, 1, 0.320, 1] }}
+        className="h-1.5 w-20 bg-gradient-to-r from-caramel via-chocolate to-transparent mx-auto mb-10 rounded-full"
+      />
+      <motion.div 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.4, delay: 0.1 }}
-        className="h-1 w-16 bg-gradient-to-r from-caramel to-transparent mx-auto mb-8"
-      />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
+      >
         {children}
-      </div>
+      </motion.div>
     </motion.section>
   )
 }
