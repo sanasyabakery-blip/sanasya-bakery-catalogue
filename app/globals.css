@@ -8,7 +8,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 70px;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
 
 /* Smooth section transitions */
 section {
-  scroll-margin-top: 70px;
+  scroll-margin-top: 100px;
 }
 
 /* Motion preferences - Respect user's prefers-reduced-motion */

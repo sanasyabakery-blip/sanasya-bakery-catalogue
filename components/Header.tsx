@@ -26,17 +26,21 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   const handleNavClick = (id: string) => {
-    const element = document.getElementById(id)
-    if (element) {
-      // Account for sticky header height (approximately 70px)
-      const offset = 80
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY
-      window.scrollTo({
-        top: elementPosition - offset,
-        behavior: 'smooth',
-      })
-      setIsOpen(false)
-    }
+    // Close menu immediately on mobile
+    setIsOpen(false)
+    
+    // Use setTimeout to allow menu to close before scrolling
+    setTimeout(() => {
+      const element = document.getElementById(id)
+      if (element) {
+        const offset = 100
+        const elementPosition = element.offsetTop
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth',
+        })
+      }
+    }, 100)
   }
 
   const handleLogoClick = () => {
@@ -45,16 +49,21 @@ export default function Header() {
   }
 
   const handleContactClick = () => {
-    const element = document.getElementById('contact')
-    if (element) {
-      const offset = 80
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY
-      window.scrollTo({
-        top: elementPosition - offset,
-        behavior: 'smooth',
-      })
-      setIsOpen(false)
-    }
+    // Close menu immediately on mobile
+    setIsOpen(false)
+    
+    // Use setTimeout to allow menu to close before scrolling
+    setTimeout(() => {
+      const element = document.getElementById('contact')
+      if (element) {
+        const offset = 100
+        const elementPosition = element.offsetTop
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth',
+        })
+      }
+    }, 100)
   }
 
   return (
