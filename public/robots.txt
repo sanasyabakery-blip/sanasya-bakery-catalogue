@@ -1,0 +1,33 @@
+# Robots.txt for Sanasya Bakery
+# This file tells search engines how to crawl and index the website
+
+# Allow all user agents
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
+
+# Specific rules for Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Specific rules for Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Disallow bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://sanasya-bakery.vercel.app/sitemap.xml
+
+# Cache duration
+Cache-Control: max-age=2592000

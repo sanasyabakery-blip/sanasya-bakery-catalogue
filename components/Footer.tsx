@@ -23,7 +23,7 @@ export default function Footer() {
         >
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-serif font-bold text-white mb-3">Sanasya</h3>
+            <h3 className="text-2xl font-serif font-bold text-white mb-3">Sanasya Bakery</h3>
             <p className="text-sm text-gray-400 leading-relaxed">
               Handcrafted bakery treats made with love and premium ingredients. Fresh bakes, custom orders, and artisanal excellence.
             </p>
