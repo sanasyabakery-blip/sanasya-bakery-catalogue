@@ -66,13 +66,83 @@ export default function Footer() {
                   Desserts
                 </button>
               </li>
+              <li>
+                <button
+                  onClick={() => {
+                    const el = document.getElementById('brownies')
+                    el?.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                  className="hover:text-white transition-colors"
+                >
+                  Brownies
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    const el = document.getElementById('breads-buns')
+                    el?.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                  className="hover:text-white transition-colors"
+                >
+                  Breads & Buns
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    const el = document.getElementById('cupcakes-tea-cakes')
+                    el?.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                  className="hover:text-white transition-colors"
+                >
+                  Cupcakes & Tea Cakes
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    const el = document.getElementById('doughnuts')
+                    el?.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                  className="hover:text-white transition-colors"
+                >
+                  Doughnuts
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    const el = document.getElementById('chocolates')
+                    el?.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                  className="hover:text-white transition-colors"
+                >
+                  Chocolates
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    const el = document.getElementById('panna-cotta')
+                    el?.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                  className="hover:text-white transition-colors"
+                >
+                  Panna Cotta
+                </button>
+              </li>
             </ul>
           </div>
 
-          {/* Contact Links */}
+          {/* Contact & Location */}
           <div>
-            <h4 className="font-semibold text-white mb-4">Contact</h4>
+            <h4 className="font-semibold text-white mb-4">Contact & Location</h4>
             <ul className="space-y-2 text-sm">
+              <li className="pb-3 border-b border-gray-700">
+                <p className="text-gray-400 text-xs font-semibold mb-1">VISIT US</p>
+                <p className="text-gray-300">Vaikalmedu Rd, Ashok Nagar, Chettipalayam, Erode, Tamil Nadu 638002</p>
+              </li>
               {whatsappNumber && (
                 <li>
                   <a

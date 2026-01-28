@@ -5,6 +5,7 @@ import Hero from '@/components/Hero'
 import CategorySection from '@/components/CategorySection'
 import MenuCard from '@/components/MenuCard'
 import ContactSection from '@/components/ContactSection'
+// import MapSection from '@/components/MapSection'
 import Footer from '@/components/Footer'
 import { menuItems } from '@/data/menu'
 
@@ -154,6 +155,9 @@ export default function Home() {
 
         {/* Contact & Enquiry Section */}
         <ContactSection />
+
+        {/* Map Section */}
+        {/* <MapSection /> */}
       </main>
       <Footer />
     </>
